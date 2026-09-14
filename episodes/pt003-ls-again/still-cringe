@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# Interprets a file name with '\n' as two files
-ls ./files | while read file; do
-	echo "<$file>"
+# Before edit: Interpreted a file name with '\n' as two files
+# Now the script is based
+for f in ./files/*; do
+	echo "$f"
 done
