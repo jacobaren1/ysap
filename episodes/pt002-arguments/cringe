@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-for arg in $*; do
+# Now accepts multiword argument within ''
+for arg in "$@"; do
 	echo "<$arg>"
 done
