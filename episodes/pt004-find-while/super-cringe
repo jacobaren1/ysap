@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Since we use new line as a delimitier and a file name has a new line character, this script is cringe
+i=0
+find ./files -type f  | while read file; do
+	echo "<$file>"
+	((i++))
+done
+echo "found $i files"
