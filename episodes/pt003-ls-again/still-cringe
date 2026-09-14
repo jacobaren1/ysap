@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Interprets a file name with '\n' as two files
 ls ./files | while read file; do
 	echo "<$file>"
 done
