@@ -2,8 +2,9 @@
 
 # We no longer have '\n' as delimiter, changed it to empty string (end of null-byte)
 # BUT: Everything after '|' is executed within a subshell - so i still equals 0 when we turn back.
+# EDIT: Made it a for loop instead, cringe is now based
 i=0
-find ./files -type f -print0 | while read -r -d '' file; do
+for file in files/*; do
 	echo "<$file>"
 	((i++))
 done
